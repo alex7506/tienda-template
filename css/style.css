@@ -394,27 +394,18 @@ img { max-width: 100%; vertical-align: middle; }
 
 .cat-card .cat-img-wrap {
   overflow: hidden;
-  height: 120px;
-  background: #f8f4ee;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 160px;
+}
+
+.cat-card .cat-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: var(--transition);
 }
 
-.cat-card .cat-img-wrap i {
-  font-size: 3rem;
-  color: var(--primary);
-  transition: var(--transition);
-}
-
-.cat-card:hover .cat-img-wrap {
-  background: var(--primary);
-}
-
-.cat-card:hover .cat-img-wrap i {
-  color: #fff;
-  transform: scale(1.15);
+.cat-card:hover .cat-img-wrap img {
+  transform: scale(1.08);
 }
 
 .cat-card .cat-title {
