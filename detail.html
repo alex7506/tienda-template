@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Detalle del Producto - MultiShop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+    <div class="container-xl">
+        <div class="row align-items-center">
+            <div class="col-lg-6 d-none d-lg-flex gap-3">
+                <a href="#">Nosotros</a><a href="contact.html">Contacto</a><a href="#">Ayuda</a><a href="#">Preguntas Frecuentes</a>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-end gap-2">
+                <div class="dropdown">
+                    <button class="btn btn-sm text-white border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fa fa-user-circle me-1"></i> Mi Cuenta
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
+                        <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-sm text-white border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown">USD</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item">EUR</button></li>
+                        <li><button class="dropdown-item">GBP</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container-xl">
+        <div class="row align-items-center gy-2">
+            <div class="col-auto">
+                <a href="index.html" class="text-decoration-none">
+                    <span class="logo-part-1">Multi</span><span class="logo-part-2">Shop</span>
+                </a>
+            </div>
+            <div class="col">
+                <form class="search-bar d-flex"><input type="text" class="form-control" placeholder="Buscar productos..."><button class="btn-search"><i class="fa fa-search"></i></button></form>
+            </div>
+            <div class="col-auto header-icons d-none d-lg-flex align-items-center gap-1">
+                <a href="#"><i class="fa fa-heart"></i><span class="badge-count">0</span></a>
+                <a href="cart.html"><i class="fa fa-shopping-cart"></i><span class="badge-count">0</span></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN NAVBAR -->
+<div class="main-nav">
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-lg-3 d-none d-lg-flex align-items-stretch position-relative">
+                <button class="cat-dropdown-btn w-100 d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#catSidebar">
+                    <span><i class="fa fa-bars me-2"></i>Todas las Categorías</span>
+                    <i class="fa fa-chevron-down fa-xs"></i>
+                </button>
+                <div class="collapse cat-sidebar" id="catSidebar">
+                    <div class="nav flex-column">
+                        <a href="#" class="nav-link"><i class="fa fa-tshirt me-2 text-muted"></i>Vestidos</a>
+                        <a href="#" class="nav-link"><i class="fa fa-vest me-2 text-muted"></i>Camisas</a>
+                        <a href="#" class="nav-link"><i class="fa fa-socks me-2 text-muted"></i>Jeans</a>
+                        <a href="#" class="nav-link"><i class="fa fa-shoe-prints me-2 text-muted"></i>Zapatos</a>
+                        <a href="#" class="nav-link"><i class="fa fa-wind me-2 text-muted"></i>Chaquetas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-0">
+                    <a href="index.html" class="text-decoration-none d-flex d-lg-none align-items-center me-auto py-2">
+                        <span class="logo-part-1" style="font-size:1.3rem;">Multi</span><span class="logo-part-2" style="font-size:1.3rem;">Shop</span>
+                    </a>
+                    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto py-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="shop.html">Tienda</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="detail.html">Detalle del Producto</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Páginas</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="cart.html">Carrito de Compras</a></li>
+                                    <li><a class="dropdown-item" href="checkout.html">Pagar</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="page-breadcrumb">
+    <div class="container-xl">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html" class="text-dark">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="shop.html" class="text-dark">Tienda</a></li>
+                <li class="breadcrumb-item active">Detalle del Producto</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- PRODUCT DETAIL -->
+<section class="py-5">
+    <div class="container-xl">
+        <div class="row g-5">
+            <!-- Product Images -->
+            <div class="col-lg-5">
+                <!-- Main image carousel -->
+                <div class="product-detail-img mb-3">
+                    <div id="productCarousel" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner rounded-3 overflow-hidden bg-white" style="aspect-ratio:1;">
+                            <div class="carousel-item active">
+                                <img src="img/product-1.jpg" class="d-block w-100 h-100" style="object-fit:cover;" alt="Producto 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/product-2.jpg" class="d-block w-100 h-100" style="object-fit:cover;" alt="Producto 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/product-3.jpg" class="d-block w-100 h-100" style="object-fit:cover;" alt="Producto 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/product-4.jpg" class="d-block w-100 h-100" style="object-fit:cover;" alt="Producto 4">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Thumbnails -->
+                <div class="d-flex gap-2 flex-wrap">
+                    <img src="img/product-1.jpg" class="product-detail-thumb active" alt="Miniatura 1"
+                         data-bs-target="#productCarousel" data-bs-slide-to="0">
+                    <img src="img/product-2.jpg" class="product-detail-thumb" alt="Miniatura 2"
+                         data-bs-target="#productCarousel" data-bs-slide-to="1">
+                    <img src="img/product-3.jpg" class="product-detail-thumb" alt="Miniatura 3"
+                         data-bs-target="#productCarousel" data-bs-slide-to="2">
+                    <img src="img/product-4.jpg" class="product-detail-thumb" alt="Miniatura 4"
+                         data-bs-target="#productCarousel" data-bs-slide-to="3">
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-lg-7">
+                <span class="badge bg-success mb-2">En Stock</span>
+                <h2 class="fw-700 mb-2">Camiseta de Algodón Clásica</h2>
+
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="product-rating">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i>
+                    </div>
+                    <span class="text-muted" style="font-size:.875rem;">4.5 (99 Reseñas)</span>
+                    <span class="text-muted">|</span>
+                    <span class="text-muted" style="font-size:.875rem;">142 vendidos</span>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <span style="font-size:1.75rem;font-weight:800;color:#2d3436;">$49.00</span>
+                    <del class="text-muted fs-5">$65.00</del>
+                    <span class="badge bg-danger px-2 py-1">-25%</span>
+                </div>
+
+                <p class="text-muted mb-4">Camiseta de algodón de primera calidad con un diseño moderno y ajustado. Tela transpirable perfecta para el uso diario. Disponible en múltiples colores y tallas.</p>
+
+                <!-- Sizes -->
+                <div class="mb-4">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="fw-600 text-dark">Talla:</span>
+                        <a href="#" class="text-muted" style="font-size:.8125rem;"><i class="fa fa-ruler me-1"></i>Guía de Tallas</a>
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <button class="size-btn">XS</button>
+                        <button class="size-btn">S</button>
+                        <button class="size-btn active">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
+                </div>
+
+                <!-- Colors -->
+                <div class="mb-4">
+                    <span class="fw-600 text-dark d-block mb-2">Color: <span class="fw-400 text-muted">Negro</span></span>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <span class="color-swatch active" style="background:#2d3436;" title="Negro"></span>
+                        <span class="color-swatch" style="background:#fff;border-color:#dee2e6;" title="Blanco"></span>
+                        <span class="color-swatch" style="background:#dc3545;" title="Rojo"></span>
+                        <span class="color-swatch" style="background:#0d6efd;" title="Azul"></span>
+                        <span class="color-swatch" style="background:#198754;" title="Verde"></span>
+                    </div>
+                </div>
+
+                <!-- Quantity & Add to Cart -->
+                <div class="d-flex align-items-center gap-3 mb-4 flex-wrap">
+                    <div class="qty-input">
+                        <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                        <input type="text" value="1" readonly>
+                        <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                    </div>
+                    <a href="cart.html" class="btn btn-primary rounded-pill px-5 py-2 fw-600 flex-grow-1 flex-sm-grow-0">
+                        <i class="fa fa-shopping-cart me-2"></i>Agregar al Carrito
+                    </a>
+                    <button class="btn btn-outline-dark rounded-circle" style="width:46px;height:46px;" title="Agregar a Lista de Deseos">
+                        <i class="fa fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Product Meta -->
+                <div class="border rounded-3 p-3 bg-white mb-4">
+                    <div class="row g-2" style="font-size:.875rem;">
+                        <div class="col-6 d-flex align-items-center gap-2 text-muted">
+                            <i class="fa fa-shipping-fast text-warning"></i> Envío gratis en compras mayores a $50
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2 text-muted">
+                            <i class="fa fa-undo text-warning"></i> Devoluciones gratuitas en 14 días
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2 text-muted">
+                            <i class="fa fa-shield-alt text-warning"></i> Pago seguro
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2 text-muted">
+                            <i class="fa fa-check-circle text-warning"></i> Calidad garantizada
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Share -->
+                <div class="d-flex align-items-center gap-3">
+                    <span class="fw-600 text-dark">Compartir:</span>
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="bg-white rounded-3 shadow-sm p-4 product-tabs">
+                    <ul class="nav nav-tabs mb-4" id="detailTabs">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#desc">Descripción</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#info">Información</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#reviews">Reseñas <span class="badge bg-warning text-dark ms-1">1</span></button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="desc">
+                            <h5 class="fw-700 mb-3">Descripción del Producto</h5>
+                            <p class="text-muted">Nuestra Camiseta de Algodón Clásica está confeccionada con 100% algodón peinado premium, ofreciendo una suavidad y transpirabilidad incomparables. El moderno corte ajustado favorece todo tipo de figura manteniendo la comodidad durante todo el día. La tela pre-encogida garantiza que la camiseta conserve su forma lavado tras lavado.</p>
+                            <p class="text-muted">Ya sea combinándola con un blazer o usándola casual con jeans, esta camiseta versátil es un imprescindible del guardarropa al que volverás una y otra vez.</p>
+                            <ul class="text-muted">
+                                <li>100% algodón peinado premium</li>
+                                <li>Pre-encogido para un ajuste duradero</li>
+                                <li>Costuras reforzadas en las juntas</li>
+                                <li>Lavable a máquina</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="info">
+                            <h5 class="fw-700 mb-3">Información Adicional</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <table class="table table-sm">
+                                        <tr><th style="width:40%;">Material</th><td>100% Algodón</td></tr>
+                                        <tr><th>Peso</th><td>180 gsm</td></tr>
+                                        <tr><th>Corte</th><td>Ajustado</td></tr>
+                                        <tr><th>Cuello</th><td>Cuello Redondo</td></tr>
+                                        <tr><th>Manga</th><td>Manga Corta</td></tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-6">
+                                    <table class="table table-sm">
+                                        <tr><th style="width:40%;">Cuidado</th><td>Lavar a máquina en frío</td></tr>
+                                        <tr><th>Marca</th><td>MultiShop Basics</td></tr>
+                                        <tr><th>País</th><td>Fabricado en Portugal</td></tr>
+                                        <tr><th>SKU</th><td>TS-001-BLK</td></tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="reviews">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <h5 class="fw-700 mb-4">Reseñas de Clientes</h5>
+                                    <div class="d-flex gap-3 mb-4 p-3 bg-light rounded-3">
+                                        <img src="img/user.jpg" alt="Usuario" class="rounded-circle flex-shrink-0" style="width:48px;height:48px;object-fit:cover;">
+                                        <div>
+                                            <div class="d-flex align-items-center gap-2 mb-1">
+                                                <strong class="text-dark">John Doe</strong>
+                                                <small class="text-muted">— 01 Ene, 2025</small>
+                                            </div>
+                                            <div class="product-rating mb-2">
+                                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i>
+                                            </div>
+                                            <p class="text-muted mb-0" style="font-size:.875rem;">¡Excelente calidad! La tela es muy suave y el ajuste es perfecto. Definitivamente compraré más colores.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="fw-700 mb-4">Dejar una Reseña</h5>
+                                    <p class="text-muted" style="font-size:.8125rem;">Tu dirección de correo no será publicada. Los campos obligatorios están marcados *</p>
+                                    <div class="d-flex align-items-center gap-2 mb-3">
+                                        <span class="text-muted" style="font-size:.875rem;">Tu Valoración *:</span>
+                                        <div class="product-rating" id="starRating" style="cursor:pointer;font-size:1rem;">
+                                            <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <form>
+                                        <div class="mb-3">
+                                            <textarea class="form-control" rows="4" placeholder="Tu Reseña *"></textarea>
+                                        </div>
+                                        <div class="row g-2 mb-3">
+                                            <div class="col-6">
+                                                <input type="text" class="form-control" placeholder="Tu Nombre *">
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="email" class="form-control" placeholder="Tu Correo *">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary rounded-pill px-4">Enviar Reseña</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section class="py-5 bg-white">
+    <div class="container-xl">
+        <h2 class="section-title position-relative text-uppercase mb-4 w-100">
+            <span class="bg-white pe-3">También Te Puede Gustar</span>
+        </h2>
+        <div class="related-slider-wrapper">
+            <button class="related-slider-btn prev" aria-label="Anterior"><i class="fa fa-chevron-left"></i></button>
+            <div class="related-slider" id="relatedSlider">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/product-1.jpg" alt="Producto">
+                        <div class="product-actions">
+                            <button class="btn-action"><i class="fa fa-heart"></i></button>
+                            <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar</a>
+                            <button class="btn-action"><i class="fa fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <a href="detail.html" class="product-name">Camiseta de Algodón Clásica</a>
+                        <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i> <span>(99)</span></div>
+                        <div class="product-price">$49.00 <del>$65.00</del></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/product-2.jpg" alt="Producto">
+                        <div class="product-actions">
+                            <button class="btn-action"><i class="fa fa-heart"></i></button>
+                            <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar</a>
+                            <button class="btn-action"><i class="fa fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <a href="detail.html" class="product-name">Jeans Ajustados de Mezclilla</a>
+                        <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i> <span>(74)</span></div>
+                        <div class="product-price">$89.00 <del>$120.00</del></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/product-3.jpg" alt="Producto">
+                        <div class="product-actions">
+                            <button class="btn-action"><i class="fa fa-heart"></i></button>
+                            <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar</a>
+                            <button class="btn-action"><i class="fa fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <a href="detail.html" class="product-name">Vestido Floral de Verano</a>
+                        <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(128)</span></div>
+                        <div class="product-price">$65.00 <del>$85.00</del></div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/product-4.jpg" alt="Producto">
+                        <div class="product-actions">
+                            <button class="btn-action"><i class="fa fa-heart"></i></button>
+                            <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar</a>
+                            <button class="btn-action"><i class="fa fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <a href="detail.html" class="product-name">Blazer Casual de Lino</a>
+                        <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="far fa-star"></i> <span>(52)</span></div>
+                        <div class="product-price">$149.00</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="img/product-5.jpg" alt="Producto">
+                        <div class="product-actions">
+                            <button class="btn-action"><i class="fa fa-heart"></i></button>
+                            <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar</a>
+                            <button class="btn-action"><i class="fa fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <a href="detail.html" class="product-name">Botines de Cuero</a>
+                        <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(210)</span></div>
+                        <div class="product-price">$119.00 <del>$160.00</del></div>
+                    </div>
+                </div>
+            </div>
+            <button class="related-slider-btn next" aria-label="Siguiente"><i class="fa fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container-xl">
+        <div class="row g-4 pb-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="mb-3">
+                    <span class="logo-part-1" style="font-size:1.5rem;">Multi</span><span class="logo-part-2" style="font-size:1.5rem;">Shop</span>
+                </div>
+                <p style="font-size:.875rem;">Tu destino de moda premium.</p>
+                <div class="mb-3">
+                    <p class="mb-1"><i class="fa fa-map-marker-alt text-warning me-2"></i>123 Calle, Nueva York, EE.UU.</p>
+                    <p class="mb-1"><i class="fa fa-envelope text-warning me-2"></i>info@multishop.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-warning me-2"></i>+012 345 67890</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+                <h5>Enlaces Rápidos</h5>
+                <div class="d-flex flex-column gap-2">
+                    <a href="index.html"><i class="fa fa-angle-right me-1"></i>Inicio</a>
+                    <a href="shop.html"><i class="fa fa-angle-right me-1"></i>Tienda</a>
+                    <a href="cart.html"><i class="fa fa-angle-right me-1"></i>Carrito</a>
+                    <a href="contact.html"><i class="fa fa-angle-right me-1"></i>Contacto</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+                <h5>Mi Cuenta</h5>
+                <div class="d-flex flex-column gap-2">
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Mi Perfil</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Mis Pedidos</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Lista de Deseos</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Devoluciones</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5>Boletín</h5>
+                <p style="font-size:.875rem;">Suscríbete y obtén 10% de descuento en tu primer pedido.</p>
+                <form class="newsletter-form d-flex mb-3">
+                    <input type="email" class="form-control" placeholder="Tu correo electrónico">
+                    <button class="btn btn-primary px-3"><i class="fa fa-paper-plane"></i></button>
+                </form>
+                <img src="img/payments.svg" alt="Métodos de pago" class="img-fluid" style="max-height:52px;">
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+            <p class="mb-0">&copy; 2025 <a href="index.html" class="text-warning text-decoration-none">MultiShop</a>. Todos los Derechos Reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top d-flex" id="backToTop"><i class="fa fa-chevron-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    // Thumbnail carousel sync
+    document.querySelectorAll('.product-detail-thumb').forEach(thumb => {
+        thumb.addEventListener('click', function() {
+            document.querySelectorAll('.product-detail-thumb').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    // Color swatches
+    document.querySelectorAll('.color-swatch').forEach(sw => {
+        sw.addEventListener('click', function() {
+            this.closest('.d-flex').querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    // Size buttons
+    document.querySelectorAll('.size-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.closest('.d-flex').querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>

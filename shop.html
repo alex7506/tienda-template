@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Tienda - MultiShop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora nuestra colección completa de productos de moda">
+
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+    <div class="container-xl">
+        <div class="row align-items-center">
+            <div class="col-lg-6 d-none d-lg-flex gap-3">
+                <a href="#">Nosotros</a>
+                <a href="contact.html">Contacto</a>
+                <a href="#">Ayuda</a>
+                <a href="#">Preguntas Frecuentes</a>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-end gap-2">
+                <div class="dropdown">
+                    <button class="btn btn-sm text-white border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fa fa-user-circle me-1"></i> Mi Cuenta
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
+                        <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-sm text-white border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown">USD</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item">EUR</button></li>
+                        <li><button class="dropdown-item">GBP</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container-xl">
+        <div class="row align-items-center gy-2">
+            <div class="col-auto">
+                <a href="index.html" class="text-decoration-none">
+                    <span class="logo-part-1">Multi</span><span class="logo-part-2">Shop</span>
+                </a>
+            </div>
+            <div class="col">
+                <form class="search-bar d-flex" action="#">
+                    <input type="text" class="form-control" placeholder="Buscar productos, marcas y más...">
+                    <button class="btn-search" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="col-auto header-icons d-none d-lg-flex align-items-center gap-1">
+                <a href="#" title="Lista de Deseos"><i class="fa fa-heart"></i><span class="badge-count">0</span></a>
+                <a href="cart.html" title="Carrito"><i class="fa fa-shopping-cart"></i><span class="badge-count">0</span></a>
+                <div class="ps-2 border-start">
+                    <small class="text-muted d-block" style="font-size:.7rem;">Atención al Cliente</small>
+                    <strong class="text-dark" style="font-size:.9rem;">+012 345 6789</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN NAVBAR -->
+<div class="main-nav">
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-lg-3 d-none d-lg-flex align-items-stretch position-relative">
+                <button class="cat-dropdown-btn w-100 d-flex align-items-center justify-content-between"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#catSidebar">
+                    <span><i class="fa fa-bars me-2"></i>Todas las Categorías</span>
+                    <i class="fa fa-chevron-down fa-xs"></i>
+                </button>
+                <div class="collapse cat-sidebar" id="catSidebar">
+                    <div class="nav flex-column">
+                        <div class="nav-item dropdown dropend">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                <span><i class="fa fa-tshirt me-2 text-muted"></i>Vestidos</span>
+                                <i class="fa fa-chevron-right fa-xs"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Vestidos de Hombre</a></li>
+                                <li><a class="dropdown-item" href="#">Vestidos de Mujer</a></li>
+                                <li><a class="dropdown-item" href="#">Ropa de Bebé</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="nav-link"><i class="fa fa-vest me-2 text-muted"></i>Camisas</a>
+                        <a href="#" class="nav-link"><i class="fa fa-socks me-2 text-muted"></i>Jeans</a>
+                        <a href="#" class="nav-link"><i class="fa fa-swimmer me-2 text-muted"></i>Ropa de Baño</a>
+                        <a href="#" class="nav-link"><i class="fa fa-running me-2 text-muted"></i>Ropa Deportiva</a>
+                        <a href="#" class="nav-link"><i class="fa fa-wind me-2 text-muted"></i>Chaquetas</a>
+                        <a href="#" class="nav-link"><i class="fa fa-shoe-prints me-2 text-muted"></i>Zapatos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-0">
+                    <a href="index.html" class="text-decoration-none d-flex d-lg-none align-items-center me-auto py-2">
+                        <span class="logo-part-1" style="font-size:1.3rem;">Multi</span><span class="logo-part-2" style="font-size:1.3rem;">Shop</span>
+                    </a>
+                    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto py-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="shop.html">Tienda</a></li>
+                            <li class="nav-item"><a class="nav-link" href="detail.html">Detalle del Producto</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Páginas</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="cart.html">Carrito de Compras</a></li>
+                                    <li><a class="dropdown-item" href="checkout.html">Pagar</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="page-breadcrumb">
+    <div class="container-xl">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html" class="text-dark">Inicio</a></li>
+                <li class="breadcrumb-item active">Tienda</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- SHOP CONTENT -->
+<section class="py-4">
+    <div class="container-xl">
+        <div class="row g-4">
+
+            <!-- SIDEBAR FILTERS -->
+            <div class="col-lg-3 filter-sidebar">
+                <!-- Search -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p class="filter-title">Buscar</p>
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-sm" placeholder="Buscar productos...">
+                            <button class="btn btn-primary btn-sm"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p class="filter-title">Categorías</p>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><a href="#" class="d-flex justify-content-between align-items-center text-dark text-decoration-none hover-primary">
+                                <span>Todos los Productos</span><span class="badge bg-light text-dark border">486</span>
+                            </a></li>
+                            <li class="mb-2"><a href="#" class="d-flex justify-content-between align-items-center text-dark text-decoration-none">
+                                <span>Vestidos</span><span class="badge bg-light text-dark border">120</span>
+                            </a></li>
+                            <li class="mb-2"><a href="#" class="d-flex justify-content-between align-items-center text-dark text-decoration-none">
+                                <span>Camisas</span><span class="badge bg-light text-dark border">85</span>
+                            </a></li>
+                            <li class="mb-2"><a href="#" class="d-flex justify-content-between align-items-center text-dark text-decoration-none">
+                                <span>Jeans</span><span class="badge bg-light text-dark border">64</span>
+                            </a></li>
+                            <li class="mb-2"><a href="#" class="d-flex justify-content-between align-items-center text-dark text-decoration-none">
+                                <span>Zapatos</span><span class="badge bg-light text-dark border">93</span>
+                            </a></li>
+                            <li class="mb-0"><a href="#" class="d-flex justify-content-between align-items-center text-dark text-decoration-none">
+                                <span>Chaquetas</span><span class="badge bg-light text-dark border">58</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p class="filter-title">Rango de Precio</p>
+                        <div class="mb-2">
+                            <input type="range" class="form-range price-range-slider" min="0" max="500" value="250" id="priceRange">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-muted" style="font-size:.8rem;">$0</span>
+                            <span class="fw-600 text-dark">Hasta $<span id="priceVal">250</span></span>
+                            <span class="text-muted" style="font-size:.8rem;">$500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Size -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p class="filter-title">Talla</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <button class="size-btn active">XS</button>
+                            <button class="size-btn">S</button>
+                            <button class="size-btn">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                            <button class="size-btn">XXL</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Color -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p class="filter-title">Color</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="color-swatch active" style="background:#2d3436;" title="Negro"></span>
+                            <span class="color-swatch" style="background:#fff;border-color:#dee2e6;" title="Blanco"></span>
+                            <span class="color-swatch" style="background:#dc3545;" title="Rojo"></span>
+                            <span class="color-swatch" style="background:#0d6efd;" title="Azul"></span>
+                            <span class="color-swatch" style="background:#198754;" title="Verde"></span>
+                            <span class="color-swatch" style="background:#ffc107;" title="Amarillo"></span>
+                            <span class="color-swatch" style="background:#6f42c1;" title="Morado"></span>
+                            <span class="color-swatch" style="background:#fd7e14;" title="Naranja"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rating -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p class="filter-title">Valoración</p>
+                        <div class="d-flex flex-column gap-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="r5" checked>
+                                <label class="form-check-label" for="r5">
+                                    <i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i> <small class="text-muted">(128)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="r4">
+                                <label class="form-check-label" for="r4">
+                                    <i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="far fa-star text-warning"></i> <small class="text-muted">(64)</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="r3">
+                                <label class="form-check-label" for="r3">
+                                    <i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="far fa-star text-warning"></i><i class="far fa-star text-warning"></i> <small class="text-muted">(37)</small>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /SIDEBAR -->
+
+            <!-- PRODUCTS GRID -->
+            <div class="col-lg-9">
+                <!-- Controls -->
+                <div class="shop-controls mb-4">
+                    <div class="d-flex align-items-center gap-2 me-auto">
+                        <button class="view-btn active" title="Vista de cuadrícula"><i class="fa fa-th"></i></button>
+                        <button class="view-btn" title="Vista de lista"><i class="fa fa-list"></i></button>
+                    </div>
+                    <small class="text-muted me-auto">Mostrando <strong>1–12</strong> de <strong>486</strong> productos</small>
+                    <div class="d-flex align-items-center gap-2 ms-auto">
+                        <label class="text-muted mb-0" style="font-size:.875rem;white-space:nowrap;">Ordenar por:</label>
+                        <select class="form-select form-select-sm" style="width:auto;">
+                            <option>Destacados</option>
+                            <option>Precio: Menor a Mayor</option>
+                            <option>Precio: Mayor a Menor</option>
+                            <option>Más Recientes</option>
+                            <option>Mejor Valorados</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="row g-3" id="productGrid">
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-hot">Popular</span>
+                                <img src="img/product-1.jpg" alt="Producto 1">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Camiseta de Algodón Clásica</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i> <span>(99)</span></div>
+                                <div class="product-price">$49.00 <del>$65.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-sale">Oferta</span>
+                                <img src="img/product-2.jpg" alt="Producto 2">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Jeans Ajustados de Mezclilla</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i> <span>(74)</span></div>
+                                <div class="product-price">$89.00 <del>$120.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-new">Nuevo</span>
+                                <img src="img/product-3.jpg" alt="Producto 3">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Vestido Floral de Verano</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(128)</span></div>
+                                <div class="product-price">$65.00 <del>$85.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="img/product-4.jpg" alt="Producto 4">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Blazer Casual de Lino</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="far fa-star"></i> <span>(52)</span></div>
+                                <div class="product-price">$149.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-sale">Oferta</span>
+                                <img src="img/product-5.jpg" alt="Producto 5">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Botines de Cuero</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(210)</span></div>
+                                <div class="product-price">$119.00 <del>$160.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="img/product-6.jpg" alt="Producto 6">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Zapatillas de Running</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i> <span>(88)</span></div>
+                                <div class="product-price">$95.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-hot">Popular</span>
+                                <img src="img/product-7.jpg" alt="Producto 7">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Cortavientos con Capucha</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i> <span>(63)</span></div>
+                                <div class="product-price">$79.00 <del>$99.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-new">Nuevo</span>
+                                <img src="img/product-8.jpg" alt="Producto 8">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Polo de Rayas</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i> <span>(45)</span></div>
+                                <div class="product-price">$55.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="img/product-1.jpg" alt="Producto 9">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Camisa Oxford de Botones</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(187)</span></div>
+                                <div class="product-price">$72.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-sale">Oferta</span>
+                                <img src="img/product-2.jpg" alt="Producto 10">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Abrigo Premium de Lana</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i> <span>(41)</span></div>
+                                <div class="product-price">$189.00 <del>$250.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="img/product-3.jpg" alt="Producto 11">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Vestido de Noche de Encaje</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="far fa-star"></i> <span>(29)</span></div>
+                                <div class="product-price">$225.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-new">Nuevo</span>
+                                <img src="img/product-4.jpg" alt="Producto 12">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="cart.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Pantalón Cargo Corto</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i> <span>(17)</span></div>
+                                <div class="product-price">$69.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <nav class="mt-5 d-flex justify-content-center" aria-label="Páginas de productos">
+                    <ul class="pagination gap-1">
+                        <li class="page-item disabled">
+                            <a class="page-link rounded-2 border-0" href="#"><i class="fa fa-chevron-left"></i></a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link rounded-2 border-0 bg-warning text-dark" href="#">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link rounded-2 border-0 text-dark" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link rounded-2 border-0 text-dark" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link rounded-2 border-0 text-dark" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link rounded-2 border-0 text-dark" href="#">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link rounded-2 border-0 text-dark" href="#"><i class="fa fa-chevron-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- /PRODUCTS GRID -->
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container-xl">
+        <div class="row g-4 pb-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="mb-3">
+                    <span class="logo-part-1" style="font-size:1.5rem;">Multi</span><span class="logo-part-2" style="font-size:1.5rem;">Shop</span>
+                </div>
+                <p style="font-size:.875rem;">Tu destino de moda premium. Estilos de calidad a precios insuperables.</p>
+                <div class="mb-3">
+                    <p class="mb-1"><i class="fa fa-map-marker-alt text-warning me-2"></i>123 Calle, Nueva York, EE.UU.</p>
+                    <p class="mb-1"><i class="fa fa-envelope text-warning me-2"></i>info@multishop.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-warning me-2"></i>+012 345 67890</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+                <h5>Enlaces Rápidos</h5>
+                <div class="d-flex flex-column gap-2">
+                    <a href="index.html"><i class="fa fa-angle-right me-1"></i>Inicio</a>
+                    <a href="shop.html"><i class="fa fa-angle-right me-1"></i>Nuestra Tienda</a>
+                    <a href="cart.html"><i class="fa fa-angle-right me-1"></i>Carrito de Compras</a>
+                    <a href="checkout.html"><i class="fa fa-angle-right me-1"></i>Pagar</a>
+                    <a href="contact.html"><i class="fa fa-angle-right me-1"></i>Contáctanos</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+                <h5>Mi Cuenta</h5>
+                <div class="d-flex flex-column gap-2">
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Mi Perfil</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Mis Pedidos</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Lista de Deseos</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Devoluciones</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Centro de Ayuda</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5>Boletín</h5>
+                <p style="font-size:.875rem;">Suscríbete y obtén 10% de descuento en tu primer pedido.</p>
+                <form class="newsletter-form d-flex mb-3">
+                    <input type="email" class="form-control" placeholder="Tu correo electrónico">
+                    <button class="btn btn-primary px-3"><i class="fa fa-paper-plane"></i></button>
+                </form>
+                <img src="img/payments.svg" alt="Métodos de pago" class="img-fluid" style="max-height:52px;">
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+            <p class="mb-0">&copy; 2025 <a href="index.html" class="text-warning text-decoration-none">MultiShop</a>. Todos los Derechos Reservados.</p>
+            <div class="d-flex gap-3">
+                <a href="#" style="font-size:.8125rem;">Política de Privacidad</a>
+                <a href="#" style="font-size:.8125rem;">Términos de Servicio</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top d-flex" id="backToTop"><i class="fa fa-chevron-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    // Price range
+    document.getElementById('priceRange')?.addEventListener('input', function() {
+        document.getElementById('priceVal').textContent = this.value;
+    });
+    // Size buttons
+    document.querySelectorAll('.size-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.closest('.d-flex').querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>

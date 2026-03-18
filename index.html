@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>MultiShop - Tienda de Moda en Línea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MultiShop - Tu destino de moda premium en línea">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== TOPBAR ===== -->
+<div class="topbar">
+    <div class="container-xl">
+        <div class="row align-items-center">
+            <div class="col-lg-6 d-none d-lg-flex gap-3">
+                <a href="#">Nosotros</a>
+                <a href="contact.html">Contacto</a>
+                <a href="#">Ayuda</a>
+                <a href="#">Preguntas Frecuentes</a>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-end gap-2">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-secondary text-white border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fa fa-user-circle me-1"></i> Mi Cuenta
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-sign-in-alt me-2"></i>Iniciar sesión</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-user-plus me-2"></i>Registrarse</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-secondary text-white border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown">USD</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button">EUR</button></li>
+                        <li><button class="dropdown-item" type="button">GBP</button></li>
+                        <li><button class="dropdown-item" type="button">CAD</button></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-secondary text-white border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown">ES</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button">EN</button></li>
+                        <li><button class="dropdown-item" type="button">FR</button></li>
+                        <li><button class="dropdown-item" type="button">DE</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ===== /TOPBAR ===== -->
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+    <div class="container-xl">
+        <div class="row align-items-center gy-2">
+            <div class="col-auto">
+                <a href="index.html" class="text-decoration-none d-flex align-items-center">
+                    <span class="site-logo">
+                        <span class="logo-part-1">Multi</span><span class="logo-part-2">Shop</span>
+                    </span>
+                </a>
+            </div>
+            <div class="col">
+                <form class="search-bar d-flex" action="#">
+                    <input type="text" class="form-control" placeholder="Buscar productos, marcas y más...">
+                    <button class="btn-search" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="col-auto header-icons d-none d-lg-flex align-items-center gap-1">
+                <a href="#" title="Lista de Deseos">
+                    <i class="fa fa-heart"></i>
+                    <span class="badge-count">0</span>
+                </a>
+                <a href="cart.html" title="Carrito">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="badge-count">0</span>
+                </a>
+                <div class="ps-2 border-start">
+                    <div class="d-flex flex-column lh-1">
+                        <small class="text-muted" style="font-size:.7rem;">Atención al Cliente</small>
+                        <strong class="text-dark" style="font-size:.9rem;">+012 345 6789</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ===== /HEADER ===== -->
+
+<!-- ===== MAIN NAVBAR ===== -->
+<div class="main-nav">
+    <div class="container-xl">
+        <div class="row">
+            <!-- Categories dropdown -->
+            <div class="col-lg-3 d-none d-lg-flex align-items-stretch position-relative">
+                <button class="cat-dropdown-btn w-100 d-flex align-items-center justify-content-between"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#catSidebar" aria-expanded="false">
+                    <span><i class="fa fa-bars me-2"></i>Todas las Categorías</span>
+                    <i class="fa fa-chevron-down fa-xs"></i>
+                </button>
+                <div class="collapse cat-sidebar" id="catSidebar">
+                    <div class="nav flex-column">
+                        <div class="nav-item dropdown dropend">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                <span><i class="fa fa-tshirt me-2 text-muted"></i>Vestidos</span>
+                                <i class="fa fa-chevron-right fa-xs"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Vestidos de Hombre</a></li>
+                                <li><a class="dropdown-item" href="#">Vestidos de Mujer</a></li>
+                                <li><a class="dropdown-item" href="#">Ropa de Bebé</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="nav-link"><i class="fa fa-vest me-2 text-muted"></i>Camisas</a>
+                        <a href="#" class="nav-link"><i class="fa fa-socks me-2 text-muted"></i>Jeans</a>
+                        <a href="#" class="nav-link"><i class="fa fa-swimmer me-2 text-muted"></i>Ropa de Baño</a>
+                        <a href="#" class="nav-link"><i class="fa fa-bed me-2 text-muted"></i>Ropa de Dormir</a>
+                        <a href="#" class="nav-link"><i class="fa fa-running me-2 text-muted"></i>Ropa Deportiva</a>
+                        <a href="#" class="nav-link"><i class="fa fa-user me-2 text-muted"></i>Monos</a>
+                        <a href="#" class="nav-link"><i class="fa fa-briefcase me-2 text-muted"></i>Blazers</a>
+                        <a href="#" class="nav-link"><i class="fa fa-wind me-2 text-muted"></i>Chaquetas</a>
+                        <a href="#" class="nav-link"><i class="fa fa-shoe-prints me-2 text-muted"></i>Zapatos</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Main menu -->
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-0">
+                    <a href="index.html" class="text-decoration-none d-flex d-lg-none align-items-center me-auto py-2">
+                        <span class="logo-part-1" style="font-size:1.3rem;">Multi</span><span class="logo-part-2" style="font-size:1.3rem;">Shop</span>
+                    </a>
+                    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav me-auto py-0">
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="shop.html">Tienda</a></li>
+                            <li class="nav-item"><a class="nav-link" href="detail.html">Detalle del Producto</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Páginas</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="cart.html">Carrito de Compras</a></li>
+                                    <li><a class="dropdown-item" href="checkout.html">Pagar</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                        </ul>
+                        <div class="d-flex d-lg-none align-items-center gap-3 py-2">
+                            <a href="#" class="text-white"><i class="fa fa-heart"></i> Lista de Deseos</a>
+                            <a href="cart.html" class="text-white"><i class="fa fa-shopping-cart"></i> Carrito</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ===== /MAIN NAVBAR ===== -->
+
+<!-- ===== INFO BAR ===== -->
+<div class="info-bar d-none d-md-block">
+    <div class="container-xl">
+        <div class="row justify-content-center">
+            <div class="col-auto info-bar-item"><i class="fa fa-shipping-fast text-warning"></i> Envío gratis en pedidos mayores a $50</div>
+            <div class="col-auto info-bar-item"><i class="fa fa-undo text-warning"></i> Devoluciones gratuitas en 14 días</div>
+            <div class="col-auto info-bar-item"><i class="fa fa-lock text-warning"></i> Pago seguro</div>
+            <div class="col-auto info-bar-item"><i class="fa fa-headset text-warning"></i> Soporte 24/7</div>
+        </div>
+    </div>
+</div>
+<!-- ===== /INFO BAR ===== -->
+
+<!-- ===== HERO + OFFER BANNERS ===== -->
+<section class="py-3">
+    <div class="container-xl">
+        <div class="row g-3">
+            <div class="col-lg-8">
+                <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner rounded-3 overflow-hidden" style="height:430px;">
+                        <div class="carousel-item active h-100">
+                            <img src="img/carousel-1.jpg" class="d-block w-100 h-100" style="object-fit:cover;" alt="Moda Masculina">
+                            <div class="carousel-caption d-flex flex-column justify-content-center text-start ps-5" style="background:linear-gradient(90deg,rgba(30,30,30,.7) 0%,transparent 70%);inset:0;">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span style="display:inline-block;width:32px;height:2px;background:#FFD333;border-radius:2px;"></span>
+                                    <span style="font-size:.72rem;font-weight:700;letter-spacing:.18em;color:#FFD333;text-transform:uppercase;">Nueva Colección 2025</span>
+                                </div>
+                                <h1 class="display-5 fw-800 text-white mb-3" style="text-shadow:0 2px 12px rgba(0,0,0,.4);line-height:1.15;">Moda Masculina</h1>
+                                <p class="mb-4 d-none d-md-block" style="color:rgba(255,255,255,.88);font-size:1rem;font-weight:400;max-width:340px;line-height:1.6;text-shadow:0 1px 6px rgba(0,0,0,.3);">Descubre las últimas tendencias en ropa masculina — estilo redefinido para el hombre moderno.</p>
+                                <a href="shop.html" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2" style="width:fit-content;">Comprar Ahora <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="img/carousel-2.jpg" class="d-block w-100 h-100" style="object-fit:cover;" alt="Moda Femenina">
+                            <div class="carousel-caption d-flex flex-column justify-content-center text-start ps-5" style="background:linear-gradient(90deg,rgba(30,30,30,.7) 0%,transparent 70%);inset:0;">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span style="display:inline-block;width:32px;height:2px;background:#FFD333;border-radius:2px;"></span>
+                                    <span style="font-size:.72rem;font-weight:700;letter-spacing:.18em;color:#FFD333;text-transform:uppercase;">Tendencia Actual</span>
+                                </div>
+                                <h1 class="display-5 fw-800 text-white mb-3" style="text-shadow:0 2px 12px rgba(0,0,0,.4);line-height:1.15;">Moda Femenina</h1>
+                                <p class="mb-4 d-none d-md-block" style="color:rgba(255,255,255,.88);font-size:1rem;font-weight:400;max-width:340px;line-height:1.6;text-shadow:0 1px 6px rgba(0,0,0,.3);">Estilos elegantes para cada ocasión — desde looks casuales hasta impresionantes conjuntos de noche.</p>
+                                <a href="shop.html" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2" style="width:fit-content;">Comprar Ahora <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="img/carousel-3.jpg" class="d-block w-100 h-100" style="object-fit:cover;" alt="Colección Infantil">
+                            <div class="carousel-caption d-flex flex-column justify-content-center text-start ps-5" style="background:linear-gradient(90deg,rgba(30,30,30,.7) 0%,transparent 70%);inset:0;">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span style="display:inline-block;width:32px;height:2px;background:#FFD333;border-radius:2px;"></span>
+                                    <span style="font-size:.72rem;font-weight:700;letter-spacing:.18em;color:#FFD333;text-transform:uppercase;">Ahorra hasta un 30%</span>
+                                </div>
+                                <h1 class="display-5 fw-800 text-white mb-3" style="text-shadow:0 2px 12px rgba(0,0,0,.4);line-height:1.15;">Colección Infantil</h1>
+                                <p class="mb-4 d-none d-md-block" style="color:rgba(255,255,255,.88);font-size:1rem;font-weight:400;max-width:340px;line-height:1.6;text-shadow:0 1px 6px rgba(0,0,0,.3);">Prendas divertidas, cómodas y elegantes diseñadas para moverse y crecer con los más pequeños.</p>
+                                <a href="shop.html" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2" style="width:fit-content;">Comprar Ahora <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex flex-column gap-3">
+                <div class="offer-banner flex-fill">
+                    <img src="img/offer-1.jpg" alt="Oferta Especial">
+                    <div class="offer-banner-overlay">
+                        <span class="badge bg-danger mb-1" style="font-size:.75rem;">AHORRA 20%</span>
+                        <h4 class="fw-700 mb-1">Oferta Especial</h4>
+                        <span class="offer-price mb-2">Desde $49.99</span>
+                        <a href="shop.html" class="btn btn-primary btn-sm rounded-pill px-3">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="offer-banner flex-fill">
+                    <img src="img/offer-2.jpg" alt="Rebajas de Verano">
+                    <div class="offer-banner-overlay">
+                        <span class="badge bg-success mb-1" style="font-size:.75rem;">NUEVO</span>
+                        <h4 class="fw-700 mb-1">Rebajas de Verano</h4>
+                        <span class="offer-price mb-2">Hasta un 40% de descuento</span>
+                        <a href="shop.html" class="btn btn-primary btn-sm rounded-pill px-3">Comprar Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== /HERO ===== -->
+
+<!-- ===== FEATURES ===== -->
+<section class="py-4">
+    <div class="container-xl">
+        <div class="row g-3">
+            <div class="col-6 col-lg-3">
+                <div class="d-flex align-items-center gap-3 bg-white rounded-3 p-3 shadow-sm h-100">
+                    <div class="flex-shrink-0 d-flex align-items-center justify-content-center rounded-circle bg-warning" style="width:50px;height:50px;">
+                        <i class="fa fa-check fa-lg text-dark"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-700">Productos de Calidad</h6>
+                        <small class="text-muted">100% verificados</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="d-flex align-items-center gap-3 bg-white rounded-3 p-3 shadow-sm h-100">
+                    <div class="flex-shrink-0 d-flex align-items-center justify-content-center rounded-circle bg-warning" style="width:50px;height:50px;">
+                        <i class="fa fa-shipping-fast fa-lg text-dark"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-700">Envío Gratis</h6>
+                        <small class="text-muted">Pedidos mayores a $50</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="d-flex align-items-center gap-3 bg-white rounded-3 p-3 shadow-sm h-100">
+                    <div class="flex-shrink-0 d-flex align-items-center justify-content-center rounded-circle bg-warning" style="width:50px;height:50px;">
+                        <i class="fa fa-undo fa-lg text-dark"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-700">Devoluciones en 14 Días</h6>
+                        <small class="text-muted">Sin complicaciones</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="d-flex align-items-center gap-3 bg-white rounded-3 p-3 shadow-sm h-100">
+                    <div class="flex-shrink-0 d-flex align-items-center justify-content-center rounded-circle bg-warning" style="width:50px;height:50px;">
+                        <i class="fa fa-headset fa-lg text-dark"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-700">Soporte 24/7</h6>
+                        <small class="text-muted">Siempre disponibles para ti</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== /FEATURES ===== -->
+
+<!-- ===== CATEGORIES ===== -->
+<section class="py-5">
+    <div class="container-xl">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h2 class="section-title position-relative text-uppercase mb-0 w-100">
+                <span class="bg-body pe-3">Comprar por Categoría</span>
+            </h2>
+            <a href="shop.html" class="btn btn-outline-dark btn-sm rounded-pill px-3 flex-shrink-0">Ver Todo</a>
+        </div>
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html" class="text-decoration-none">
+                    <div class="cat-card">
+                        <div class="cat-img-wrap"><i class="fa fa-person-dress"></i></div>
+                        <div class="cat-title">Vestidos <span class="text-muted fw-400" style="font-size:.8rem;">(120)</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html" class="text-decoration-none">
+                    <div class="cat-card">
+                        <div class="cat-img-wrap"><i class="fa fa-shirt"></i></div>
+                        <div class="cat-title">Camisas <span class="text-muted fw-400" style="font-size:.8rem;">(85)</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html" class="text-decoration-none">
+                    <div class="cat-card">
+                        <div class="cat-img-wrap"><i class="fa fa-socks"></i></div>
+                        <div class="cat-title">Jeans <span class="text-muted fw-400" style="font-size:.8rem;">(64)</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html" class="text-decoration-none">
+                    <div class="cat-card">
+                        <div class="cat-img-wrap"><i class="fa fa-shoe-prints"></i></div>
+                        <div class="cat-title">Zapatos <span class="text-muted fw-400" style="font-size:.8rem;">(93)</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html" class="text-decoration-none">
+                    <div class="cat-card">
+                        <div class="cat-img-wrap"><i class="fa fa-person-running"></i></div>
+                        <div class="cat-title">Ropa Deportiva <span class="text-muted fw-400" style="font-size:.8rem;">(47)</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html" class="text-decoration-none">
+                    <div class="cat-card">
+                        <div class="cat-img-wrap"><i class="fa fa-user-tie"></i></div>
+                        <div class="cat-title">Blazers <span class="text-muted fw-400" style="font-size:.8rem;">(31)</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html" class="text-decoration-none">
+                    <div class="cat-card">
+                        <div class="cat-img-wrap"><i class="fa fa-layer-group"></i></div>
+                        <div class="cat-title">Chaquetas <span class="text-muted fw-400" style="font-size:.8rem;">(58)</span></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html" class="text-decoration-none">
+                    <div class="cat-card">
+                        <div class="cat-img-wrap"><i class="fa fa-person-swimming"></i></div>
+                        <div class="cat-title">Ropa de Baño <span class="text-muted fw-400" style="font-size:.8rem;">(29)</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== /CATEGORIES ===== -->
+
+<!-- ===== FEATURED PRODUCTS ===== -->
+<section class="py-5 bg-white">
+    <div class="container-xl">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h2 class="section-title position-relative text-uppercase mb-0 w-100">
+                <span class="bg-white pe-3">Productos Destacados</span>
+            </h2>
+            <a href="shop.html" class="btn btn-outline-dark btn-sm rounded-pill px-3 flex-shrink-0">Ver Todo</a>
+        </div>
+        <!-- Product Tabs -->
+        <ul class="nav nav-pills mb-4 gap-2" id="productTabs">
+            <li class="nav-item">
+                <button class="nav-link active rounded-pill px-4" data-bs-toggle="pill" data-bs-target="#tab-featured">Destacados</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link rounded-pill px-4" data-bs-toggle="pill" data-bs-target="#tab-bestseller">Más Vendidos</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link rounded-pill px-4" data-bs-toggle="pill" data-bs-target="#tab-new">Nuevas Llegadas</button>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="tab-featured">
+                <div class="row g-3">
+                    <!-- Product 1 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-hot">Popular</span>
+                                <img src="img/product-1.jpg" alt="Producto">
+                                <div class="product-actions">
+                                    <button class="btn-action" title="Lista de Deseos"><i class="fa fa-heart"></i></button>
+                                    <a href="shop.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action" title="Vista Rápida"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Camiseta de Algodón Clásica</a>
+                                <div class="d-flex align-items-center gap-1 my-1">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="product-rating"><span>(99)</span></span>
+                                </div>
+                                <div class="product-price">$49.00 <del>$65.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-sale">Oferta</span>
+                                <img src="img/product-2.jpg" alt="Producto">
+                                <div class="product-actions">
+                                    <button class="btn-action" title="Lista de Deseos"><i class="fa fa-heart"></i></button>
+                                    <a href="shop.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action" title="Vista Rápida"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Jeans Ajustados de Mezclilla</a>
+                                <div class="d-flex align-items-center gap-1 my-1">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i>
+                                    </div>
+                                    <span class="product-rating"><span>(74)</span></span>
+                                </div>
+                                <div class="product-price">$89.00 <del>$120.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-new">Nuevo</span>
+                                <img src="img/product-3.jpg" alt="Producto">
+                                <div class="product-actions">
+                                    <button class="btn-action" title="Lista de Deseos"><i class="fa fa-heart"></i></button>
+                                    <a href="shop.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action" title="Vista Rápida"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Vestido Floral de Verano</a>
+                                <div class="d-flex align-items-center gap-1 my-1">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    </div>
+                                    <span class="product-rating"><span>(128)</span></span>
+                                </div>
+                                <div class="product-price">$65.00 <del>$85.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="img/product-4.jpg" alt="Producto">
+                                <div class="product-actions">
+                                    <button class="btn-action" title="Lista de Deseos"><i class="fa fa-heart"></i></button>
+                                    <a href="shop.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action" title="Vista Rápida"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Blazer Casual de Lino</a>
+                                <div class="d-flex align-items-center gap-1 my-1">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="far fa-star"></i>
+                                    </div>
+                                    <span class="product-rating"><span>(52)</span></span>
+                                </div>
+                                <div class="product-price">$149.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-sale">Oferta</span>
+                                <img src="img/product-5.jpg" alt="Producto">
+                                <div class="product-actions">
+                                    <button class="btn-action" title="Lista de Deseos"><i class="fa fa-heart"></i></button>
+                                    <a href="shop.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action" title="Vista Rápida"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Botines de Cuero</a>
+                                <div class="d-flex align-items-center gap-1 my-1">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    </div>
+                                    <span class="product-rating"><span>(210)</span></span>
+                                </div>
+                                <div class="product-price">$119.00 <del>$160.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="img/product-6.jpg" alt="Producto">
+                                <div class="product-actions">
+                                    <button class="btn-action" title="Lista de Deseos"><i class="fa fa-heart"></i></button>
+                                    <a href="shop.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action" title="Vista Rápida"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Zapatillas de Running</a>
+                                <div class="d-flex align-items-center gap-1 my-1">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i>
+                                    </div>
+                                    <span class="product-rating"><span>(88)</span></span>
+                                </div>
+                                <div class="product-price">$95.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-hot">Popular</span>
+                                <img src="img/product-7.jpg" alt="Producto">
+                                <div class="product-actions">
+                                    <button class="btn-action" title="Lista de Deseos"><i class="fa fa-heart"></i></button>
+                                    <a href="shop.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action" title="Vista Rápida"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Cortavientos con Capucha</a>
+                                <div class="d-flex align-items-center gap-1 my-1">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="product-rating"><span>(63)</span></span>
+                                </div>
+                                <div class="product-price">$79.00 <del>$99.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 8 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-new">Nuevo</span>
+                                <img src="img/product-8.jpg" alt="Producto">
+                                <div class="product-actions">
+                                    <button class="btn-action" title="Lista de Deseos"><i class="fa fa-heart"></i></button>
+                                    <a href="shop.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action" title="Vista Rápida"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Polo de Rayas</a>
+                                <div class="d-flex align-items-center gap-1 my-1">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i>
+                                    </div>
+                                    <span class="product-rating"><span>(45)</span></span>
+                                </div>
+                                <div class="product-price">$55.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Best Seller tab -->
+            <div class="tab-pane fade" id="tab-bestseller">
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-hot">Popular</span>
+                                <img src="img/product-3.jpg" alt="Producto">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="shop.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Sudadera con Capucha Premium</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(305)</span></div>
+                                <div class="product-price">$85.00 <del>$110.00</del></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <img src="img/product-4.jpg" alt="Producto">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="shop.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Camisa Oxford de Botones</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i> <span>(187)</span></div>
+                                <div class="product-price">$72.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- New Arrivals tab -->
+            <div class="tab-pane fade" id="tab-new">
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <div class="product-img-wrap">
+                                <span class="product-badge badge-new">Nuevo</span>
+                                <img src="img/product-5.jpg" alt="Producto">
+                                <div class="product-actions">
+                                    <button class="btn-action"><i class="fa fa-heart"></i></button>
+                                    <a href="shop.html" class="btn-add-cart"><i class="fa fa-shopping-cart me-1"></i> Agregar al Carrito</a>
+                                    <button class="btn-action"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="detail.html" class="product-name">Chaqueta Vaquera Cropped</a>
+                                <div class="product-rating my-1"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="far fa-star"></i> <span>(22)</span></div>
+                                <div class="product-price">$110.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== /FEATURED PRODUCTS ===== -->
+
+<!-- ===== PROMO BANNER ===== -->
+<section class="py-4">
+    <div class="container-xl">
+        <div class="rounded-4 overflow-hidden position-relative" style="background:linear-gradient(135deg,#2d3436 0%,#3d464d 100%);min-height:200px;">
+            <div class="row align-items-center h-100 g-0">
+                <div class="col-md-7 p-4 p-md-5">
+                    <span class="badge bg-warning text-dark mb-2 px-3 py-1">OFERTA POR TIEMPO LIMITADO</span>
+                    <h2 class="text-white fw-800 mb-2">Rebajas de Verano — Hasta un 50% de Descuento</h2>
+                    <p class="text-white-50 mb-3">Renueva tu guardarropa con nuestra mayor venta de la temporada. Compra ahora antes de que se agote el stock.</p>
+                    <a href="shop.html" class="btn btn-primary rounded-pill px-5 py-2 fw-600">Ver Ofertas <i class="fa fa-arrow-right ms-2"></i></a>
+                </div>
+                <div class="col-md-5 d-none d-md-flex align-items-end justify-content-center" style="height:200px;overflow:hidden;">
+                    <img src="img/carousel-2.jpg" alt="Oferta" style="width:100%;height:100%;object-fit:cover;opacity:.35;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== /PROMO BANNER ===== -->
+
+<!-- ===== VENDORS ===== -->
+<section class="py-5 bg-white">
+    <div class="container-xl">
+        <h2 class="section-title position-relative text-uppercase mb-4 w-100">
+            <span class="bg-white pe-3">Nuestras Marcas</span>
+        </h2>
+        <div class="vendor-marquee-wrapper">
+            <div class="vendor-marquee">
+                <div class="vendor-card"><img src="img/vendor-1.jpg" alt="Marca 1"></div>
+                <div class="vendor-card"><img src="img/vendor-2.jpg" alt="Marca 2"></div>
+                <div class="vendor-card"><img src="img/vendor-3.jpg" alt="Marca 3"></div>
+                <div class="vendor-card"><img src="img/vendor-4.jpg" alt="Marca 4"></div>
+                <div class="vendor-card"><img src="img/vendor-5.jpg" alt="Marca 5"></div>
+                <div class="vendor-card"><img src="img/vendor-6.jpg" alt="Marca 6"></div>
+                <!-- Duplicados para bucle infinito -->
+                <div class="vendor-card" aria-hidden="true"><img src="img/vendor-1.jpg" alt=""></div>
+                <div class="vendor-card" aria-hidden="true"><img src="img/vendor-2.jpg" alt=""></div>
+                <div class="vendor-card" aria-hidden="true"><img src="img/vendor-3.jpg" alt=""></div>
+                <div class="vendor-card" aria-hidden="true"><img src="img/vendor-4.jpg" alt=""></div>
+                <div class="vendor-card" aria-hidden="true"><img src="img/vendor-5.jpg" alt=""></div>
+                <div class="vendor-card" aria-hidden="true"><img src="img/vendor-6.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===== /VENDORS ===== -->
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    <div class="container-xl">
+        <div class="row g-4 pb-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="mb-3">
+                    <span class="logo-part-1" style="font-size:1.5rem;">Multi</span><span class="logo-part-2" style="font-size:1.5rem;">Shop</span>
+                </div>
+                <p style="font-size:.875rem;">Tu destino de moda premium. Te traemos los últimos estilos con calidad y valor insuperables.</p>
+                <div class="mb-3">
+                    <p class="mb-1"><i class="fa fa-map-marker-alt text-warning me-2"></i>123 Calle, Nueva York, EE.UU.</p>
+                    <p class="mb-1"><i class="fa fa-envelope text-warning me-2"></i>info@multishop.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-warning me-2"></i>+012 345 67890</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+                <h5>Enlaces Rápidos</h5>
+                <div class="d-flex flex-column gap-2">
+                    <a href="index.html"><i class="fa fa-angle-right me-1"></i>Inicio</a>
+                    <a href="shop.html"><i class="fa fa-angle-right me-1"></i>Nuestra Tienda</a>
+                    <a href="detail.html"><i class="fa fa-angle-right me-1"></i>Detalle de Producto</a>
+                    <a href="cart.html"><i class="fa fa-angle-right me-1"></i>Carrito de Compras</a>
+                    <a href="checkout.html"><i class="fa fa-angle-right me-1"></i>Pagar</a>
+                    <a href="contact.html"><i class="fa fa-angle-right me-1"></i>Contáctanos</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+                <h5>Mi Cuenta</h5>
+                <div class="d-flex flex-column gap-2">
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Mi Perfil</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Mis Pedidos</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Lista de Deseos</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Rastrear Pedido</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Devoluciones</a>
+                    <a href="#"><i class="fa fa-angle-right me-1"></i>Centro de Ayuda</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5>Boletín</h5>
+                <p style="font-size:.875rem;">Suscríbete y obtén 10% de descuento en tu primer pedido. Mantente al día con nuestras últimas ofertas.</p>
+                <form class="newsletter-form d-flex mb-3">
+                    <input type="email" class="form-control" placeholder="Tu correo electrónico">
+                    <button class="btn btn-primary px-3" type="submit"><i class="fa fa-paper-plane"></i></button>
+                </form>
+                <div class="mt-3">
+                    <img src="img/payments.svg" alt="Métodos de pago" class="img-fluid" style="max-height:52px;">
+                </div>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+            <p class="mb-0">&copy; 2025 <a href="index.html" class="text-warning text-decoration-none">MultiShop</a>. Todos los Derechos Reservados.</p>
+            <div class="d-flex gap-3">
+                <a href="#" style="font-size:.8125rem;">Política de Privacidad</a>
+                <a href="#" style="font-size:.8125rem;">Términos de Servicio</a>
+                <a href="#" style="font-size:.8125rem;">Mapa del Sitio</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ===== /FOOTER ===== -->
+
+<!-- Back to Top -->
+<a href="#" class="back-to-top d-flex" id="backToTop"><i class="fa fa-chevron-up"></i></a>
+
+<!-- JS Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

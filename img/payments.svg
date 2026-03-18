@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 52" width="420" height="52">
+  <defs>
+    <style>
+      .card { rx: 6; ry: 6; }
+      .label { font-family: Arial, sans-serif; font-weight: 800; letter-spacing: 0.04em; }
+    </style>
+  </defs>
+
+  <!-- VISA -->
+  <rect x="0" y="0" width="76" height="48" rx="6" ry="6" fill="#1A1F71"/>
+  <text x="38" y="32" font-family="Arial, sans-serif" font-size="20" font-weight="900" font-style="italic"
+        fill="#FFFFFF" text-anchor="middle" letter-spacing="1">VISA</text>
+
+  <!-- MASTERCARD -->
+  <rect x="84" y="0" width="76" height="48" rx="6" ry="6" fill="#252525"/>
+  <circle cx="112" cy="24" r="14" fill="#EB001B"/>
+  <circle cx="136" cy="24" r="14" fill="#F79E1B"/>
+  <path d="M124 13.2 a14 14 0 0 1 0 21.6 a14 14 0 0 1 0-21.6Z" fill="#FF5F00"/>
+
+  <!-- AMERICAN EXPRESS -->
+  <rect x="168" y="0" width="76" height="48" rx="6" ry="6" fill="#2E77BC"/>
+  <text x="206" y="20" font-family="Arial, sans-serif" font-size="7.5" font-weight="700"
+        fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">AMERICAN</text>
+  <text x="206" y="30" font-family="Arial, sans-serif" font-size="7.5" font-weight="700"
+        fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">EXPRESS</text>
+  <text x="206" y="43" font-family="Arial, sans-serif" font-size="8" font-weight="800"
+        fill="#FFFFFF" text-anchor="middle" letter-spacing="0.3">AMEX</text>
+
+  <!-- PAYPAL -->
+  <rect x="252" y="0" width="76" height="48" rx="6" ry="6" fill="#003087"/>
+  <text x="272" y="20" font-family="Arial, sans-serif" font-size="11" font-weight="900"
+        fill="#009CDE" text-anchor="middle">P</text>
+  <text x="281" y="20" font-family="Arial, sans-serif" font-size="11" font-weight="900"
+        fill="#FFFFFF" text-anchor="middle">P</text>
+  <text x="290" y="20" font-family="Arial, sans-serif" font-size="11" font-weight="900"
+        fill="#012169" text-anchor="middle">P</text>
+  <text x="290" y="38" font-family="Arial, sans-serif" font-size="9.5" font-weight="700"
+        fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">PayPal</text>
+  <text x="278" y="38" font-family="Arial, sans-serif" font-size="9.5" font-weight="700"
+        fill="#009CDE" text-anchor="middle" letter-spacing="0.5">Pay</text>
+
+  <!-- STRIPE / Generic secure -->
+  <rect x="336" y="0" width="76" height="48" rx="6" ry="6" fill="#635BFF"/>
+  <text x="374" y="22" font-family="Arial, sans-serif" font-size="11" font-weight="900"
+        fill="#FFFFFF" text-anchor="middle" letter-spacing="0.3">Stripe</text>
+  <rect x="348" y="28" width="52" height="4" rx="2" fill="rgba(255,255,255,0.35)"/>
+  <rect x="348" y="35" width="30" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
+</svg>
